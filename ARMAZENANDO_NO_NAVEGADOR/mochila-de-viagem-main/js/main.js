@@ -21,10 +21,10 @@ form.addEventListener("submit", (evento) =>{
         // os inputs vão preencher os valores dos nomes e quantidades
     }
     
-    const existe = itens.find(elemento => elemento.nome === nome.value)
+    const existe = itens.find(elemento => elemento.nome === nome.value) // PESQUISAR O METODO FIND
     
     if(existe) {
-        itemAtual.id = existe.id
+        itemAtual.id = existe.id // REPRESENTA O ÍNDICE DO ARRAY
         
         atualizaElemento(itemAtual)
         
@@ -66,24 +66,38 @@ function criaElemento (iten){// estrutura de criação de elemento na tela
 
     novoItem.innerHTML += iten.nome
 
-    novoItem.appendChild(botaoDeleta())
+    novoItem.appendChild(botaoDeleta(iten.id))
 
     lista.appendChild(novoItem)// o elemento criado é colocado dentro da lista 
 
-    botaoDeleta()
+   
     
 }
 
 function atualizaElemento(item) {
-    document.querySelector("[data-id='"+item.id+"']")
+    document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade
 }
 
-function botaoDeleta() {
+function botaoDeleta(id) {
     const elementoBotao = document.createElement("button")
     elementoBotao.innerText = "x"
 
+    elementoBotao.addEventListener("click", function() {
+        //console.log(this); // this representa o elemento que foi clicado
+        deletaElemento(this.parentNode, id); // PESQUISAR SOBRE PARENT NODE
+    })
+
     return elementoBotao;
 
+}
+
+function deletaElemento(tag, id) {
+    tag.remove()
+    console.log(id)
+    //itens.splice("O que queremos remover vem aqui como elemento")
+
+    itens.splice(itens.findIndex(elemento => elemento.id === id), 1);
+    console.log(itens)
 }
 
 
