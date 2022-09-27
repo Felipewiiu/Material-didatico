@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+<script>
+
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        document.write("<hr>")
+        pulaLinha();
+    }
+
+    function calculaImc(altura, peso) { // a função está recebendo os valores que estão dentro das variáveis que recebem valor de prompt
+
+        var imc = peso / (altura * altura);  // o parentese indica qual a operação que irá se realizada primeiro
+        return imc
+
+    }
+    
+var nome = prompt("Qual é o seu nome?")         
+var altura = prompt(nome + " Poderia me informar a sua altura?"); 
+
+// com o prompt é possivel colocar dentro dos parenteses informações que irão aparecer ao usuário
+
+
+var peso = prompt("Agora o seu peso por favor");
+var resultado = calculaImc(altura, peso);
+mostra("<h1>" + nome + " O seu imc é " + Math.round(resultado) + "<h1>");
+
+
+if(resultado >= 18.5 && resultado <= 24.9){
+
+    mostra("E o seu peso é exelente!!");
+}
+
+if (resultado < 18.5){
+
+    mostra("Você está na capa do Batman kkk");
+}
+
+if (resultado >= 25.0 && resultado <= 29.9){
+
+    mostra("Voce está no caminho para para obesidade tipo 1");
+
+}
+
+if (resultado >= 30 && resultado <= 40){
+
+    mostra("Você está no caminho para a obesidade tipo 2");
+
+}
+
+if (resultado >= 41){
+
+    mostra("Você precisa urgente de um guindaste kkkkkk");
+
+}
+
+
+
+
+
+
+</script>

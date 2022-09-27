@@ -1,0 +1,17 @@
+.receita{
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    width: calc(25% - 5rem);
+    box-shadow: 1px 1px 4px #8b8a8a;
+    
+}
+
+.receita:hover{
+    transition: 1000ms;
+    position: relative;
+    bottom: 10px;
+    
+}

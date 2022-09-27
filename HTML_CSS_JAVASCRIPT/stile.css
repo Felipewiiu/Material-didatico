@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    background: rgb(131,58,180);
+background: linear-gradient(270deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 51%, rgba(252,176,69,1) 100%);
+    padding: 20px 0;
+
+}
+
+.caixa{
+    position: relative;
+    width: 940px;/* esse é o tamanho padrão usado na web ==> boa resolução*/
+    margin: 0 auto;
+}
+
+
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 0 15px;
+
+
+}
+
+nav li:hover {
+    transition: 2s;
+    transform: scale(1.1);
+}
+
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+nav a:hover{
+    color: rgb(255, 255, 255); /*o comando hover serve para indicar quando o mouse está por cima do elemento*/
+    transition: 1s;
+    transform: scale(1.2);
+       
+}
+
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+    text-align: center;
+}
+
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    border: 1px solid #000000; /* na declaração vem primeiro o tamnaho o estilo e a cor*/
+    margin: 0 1.5%;
+    padding: 30px 20px;/*para se usar porcentagem e pixos é necessário usar a propriedade box-sizing */
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 3px 1px 7px;
+    transition: 1s all;
+    
+}
+
+.produtos li:hover{
+    border-color: #1f2025f5;
+    transform: scale(1.1);
+    
+}
+
+.produtos li:hover h2{ /* essa linha de código serve para alterar o tamanho de h2 que já estáva especificado*/
+    color: #030303f5;
+}
+
+.produtos li:active{
+    transition: 10ms;
+    box-shadow: 3px 1px 7px  rgb(248 107 50);
+}
+
+.produtos h2 {
+    font-size: 28px;
+    font-weight: bolder;
+    
+}
+
+.produto-descricao {
+    font-size: 16px;
+}
+.preço-produto {
+    font-size: 22px;
+    font-weight: bolder;
+    margin: 10px 0 0;
+}
+
+footer{
+    background: rgb(131,58,180);
+    background: linear-gradient(270deg, rgba(131,58,180,1) 0%, rgba(0,0,0,1) 51%);
+    text-align: center;
+    color: blanchedalmond;
+    
+    
+    
+    
+}
+
+footer p {
+    margin: 10px 0px;
+    padding-bottom: 10px;
+
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+    
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrão {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+
+}
+.checkbox {
+    margin: 20px 0;
+}
+
+#submit {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    width:40%;
+    height: 40%;
+    font-size: 18px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: rgb(98, 173, 37);
+    /*transform: scale(1.2) rotate(360deg);  esse comando serve para girar um elemento*/ 
+    transform: scale(1.2);
+     
+}
+
+table {
+    margin: 20px 0;
+}
+
+thead {
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+td,th {
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+@media screen and (max-width: 480px) { /*screem é o conteúdo da tela atravez da midiaquerry*/
+    
+    
+    h1{
+        width: 177px;
+        margin: auto;
+    }
+
+    .caixa,.banner-caixa, .principal, .mapa,.video, main{
+        width: auto;
+        padding: 0px;
+    }
+
+    #banner{
+        padding: 0px;
+        width: 99%;
+
+    }
+    .produtos{
+        width: 100%;
+    }
+
+    .produtos li {
+        display: block;
+        margin: 30px auto;
+        width: 70%;
+    }
+
+    nav{
+        width: 344px;
+        margin: 0px auto;
+        position: static;
+    }
+
+    nav ul {
+        position: static;
+        top: 110px;
+        right: 0px;
+        width: 344px;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+    .checkbox {
+        margin: 20px 0;
+        padding: 10px
+    }
+
+    #submit{
+        display:block;
+        margin: 0px auto;
+    }
+
+    table {
+        margin: 20px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

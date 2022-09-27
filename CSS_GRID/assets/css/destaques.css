@@ -1,0 +1,94 @@
+.destaques{
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    /*Esses códigos são apenas divisões do nosso grid*/
+    height: calc(100vh - 50px);
+}
+
+.caixa{
+    display: flex;
+    align-items: flex-end;
+}
+
+.destaques__titulo{
+    color: #fdfdfd;
+    text-align: center;
+    background: rgb(0 , 0, 0, .5);
+    padding: .6rem;
+    width: 100%;
+}
+
+.destaques__principal{
+    background-image: url('../img/fortnite.jpg');
+    background-position-y: 15%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 1;/*esse comando serve para indicar que quanto espaços a imagem vai preencher*/
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.destaques__secundario:nth-child(2){/*essa é uma forma de um atalho short-hands*/
+    background : url('../img/pubg.jpg') center / cover no-repeat;
+    /*primeiro vem a imagen, position, tamanho e no repeat*/
+    grid-column: 4 / 4; /* primeiro parâmetro recebe o start e segundo o end*/
+    grid-row: 1 / 1;
+}
+
+.destaques__secundario:nth-child(3){
+    background-image: url('../img/slack.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+}
+
+.destaques__secundario:nth-child(4){
+    background: url('../img/whatsapp.png') center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
+}
+
+.destaques__secundario:nth-child(5){
+    background: url('../img/cs-go.jpg') center / cover no-repeat;
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias{
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+
+}
+
+.destaques__categorias___item{
+    display: flex;
+    align-items: center;
+    
+    background: #fdfdfd;
+    border-left: 5px solid transparent;
+    color: #333333;
+    padding: 1rem;
+    width: 50%;
+}
+
+.destaques__categorias___link{
+    color: #333333;
+}
+
+

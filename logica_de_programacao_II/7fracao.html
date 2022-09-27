@@ -1,0 +1,67 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector('canvas')
+
+var pincel = tela.getContext('2d')
+
+function desenhaQuadrado (x, y, tx, ty, cor){
+
+    pincel.fillStyle = cor
+    pincel.fillRect(x, y,tx, ty)
+    pincel.fillStroke = 'black'
+    pincel.strokeRect(x, y, tx, ty)
+    pincel.fill()
+
+}
+
+function quadrados(x, cor){
+
+    desenhaQuadrado(x, 0, 50, 50, cor)
+
+}
+
+
+quadrados(0, 'green')
+quadrados(50, 'green')
+quadrados(100, 'green')
+quadrados(150, 'white')
+
+//criando uma função para desenhar um texto
+
+
+function escreva(texto, x, y){
+
+    pincel.font = '20px Georgia';
+    pincel.fillStyle = 'black';
+                                    //x   y -- posicionamento
+    pincel.fillText(texto, x, y);
+
+}
+
+
+
+escreva("Pensou que eu não ia aprender a usar função né? kkk", 0, 80)
+escreva("pois bem, aqui está a prova!!", 0, 100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

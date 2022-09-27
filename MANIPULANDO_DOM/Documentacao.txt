@@ -1,0 +1,58 @@
+Função: É uma maneira de armazenar pedaços de códigos que serão repetidos varias vezes quando chamados
+
+Sobre uma Função anônima:
+    - Ela não pode ser chamada pois ela não tem um nome logo ela só é executada através de um gatilho como onclick por
+    Exemplo
+
+
+Sobre funções declaradas:
+    - São funções que possuem nome que por sua vez podem ser chamadas em qualquer lugar do códigos
+
+
+Sobre as funções anônimas chamadas Arrow Functions:
+
+    - São as chamadas funções de setas => . Elas são uma forma resumidas de escrever uma função anônima
+    Exemplo de sintaxe: 
+    
+    => (){
+        Código é escrito aqui dentro
+    }
+
+============ Manipulação de um evento
+
+    Toda vez que um evento ( addEventListener ) acontece podemos manipular ele no caso da função anônima colocamos
+     evento entre parenteses 
+
+
+============= Sobre o querySelectorAll:
+    Qando utilizado ele gera uma lista de arrays que precisa ser acessadas pelos seus índiceis
+    ex: ["0", "1", "2"]
+
+
+============= Operações para manipular arrays
+
+    For -- laço de repetição
+    while -- laço de repetição
+    Foreach -- laço de repetição que se aplica em cada elemento do array () =>{}
+
+
+============= Manipulando eventos
+
+    No evento do addEventListener possui uma propriedade chamada target que é possível localisar 
+    qual foi o alvo que foi selecionado
+
+
+============= Para que ser um  array?
+
+    Arrays são estruturas que servem para guardar dados e organizá-los. seu objetivo é ser um espaço fixo na memória
+    do computador que  que arnazena elementos
+
+
+============== Data atributs
+
+    Toda vez que usamos o javasript para interagir com os elemento no HTML podemos usar os Data -- atributs.
+    Como uma classe, o data -- atributs ao ser utilizado ele cria uma propriedade
+    Ex:
+        data--atributo="nome"    propriedade do tipo data com o valor nome
+
+        obs: na busca com querySelector por um data-atributs é utilizado o colchetes [] 

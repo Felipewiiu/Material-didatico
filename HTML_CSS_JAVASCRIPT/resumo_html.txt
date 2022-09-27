@@ -1,0 +1,28 @@
+=================== POSICIONAMENTO  E COMPORTAMENTO ====================
+
+
+Display inline ==> permite posicionar outros elementos do seu lado diferente do block ele não
+permite alterar o espaçameto interno e externo dele
+
+Display - block ==> tem o comportamentto de bloquear o conteudo de ocupar o mesmo espaço que
+ele horizontalmente 
+
+Display block-inline ==> possui os dois comportamentos bloquei somente a parte do conteudo e é 
+possível alterar suas dimenções
+
+
+
+
+==================== POSICIONAMENTO =====================================
+
+TEMOS TRÊS TIPOS
+
+POSITION: STATIC ==> Mantém o elemento na sua posição de origem
+
+POSITION: RELATIVE ==>  Movimenta o elemento tendo como referencia seu ponto inicial.
+
+POSITION: ABSOLUTE ==> Traz o elemento para outro plano que no caso vai para frente 
+                       da página do navegador
+
+=========================== FORMULÁRIO ===================================
+

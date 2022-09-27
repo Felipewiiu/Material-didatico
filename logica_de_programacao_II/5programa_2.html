@@ -1,0 +1,42 @@
+<canvas
+width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector('canvas')
+
+var pincel = tela.getContext('2d')
+
+function quadradoVerde (x){
+
+pincel.fillStyle ='green'
+pincel.fillRect(x, 0, 50, 50)
+pincel.fillStroke = 'black'  
+// esse comando serve para o preenchimento de borda => strokeStyle muda a cor da borda
+pincel.strokeRect(x, 0, 50, 50) // esse comando define onde ele é aplicado
+pincel.fill()
+
+}
+
+var contador = 50
+
+while(contador <= 600){
+    quadradoVerde(contador);
+    contador = contador + 50;
+
+    if(contador == 600){
+    alert('Esta completo');
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,28 @@
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas: 
+        "cabecalho"
+        "conteudo"
+        "rodape";
+    grid-template-columns: auto;/*Esse comando serve para definir as colunas do grid*/
+    grid-template-rows: 50px 100vh auto; /*Comando que são dados pelas quantidades das linhas*/
+     
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    padding:  0 2rem;
+    grid-area: cabecalho;/*Nela passamos o nome para esse trecho de código que no caso é cabecalho*/
+}
+
+.conteudo{
+    grid-area: conteudo;
+}
+
+.rodape{
+    grid-area: rodape;
+    
+}

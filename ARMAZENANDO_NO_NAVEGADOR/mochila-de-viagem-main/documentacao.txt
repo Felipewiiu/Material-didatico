@@ -1,0 +1,20 @@
+====== Diferentes armazenadores de dados
+
+-- localStorage 
+    Guarda dados somente no formato string de forma persistente
+    seu espaço de armazenamento é de 5Mb padrão
+
+-- Cookies 
+    Guarda dados de formas persistente 
+    Seu espaço de armazenamento é de 4KB
+    Guarda isformações do usário que acessa como : local, email, quais produtos de um site foram clicados
+
+-- sessionStorage
+    É similar ao local storage, sua diferença é que os dados não são salvos de formas persistentes, ou seja quando
+    o navegador é fechado os dados são perdidos
+
+
+====== JSON.stringify
+
+-- É uma função que converte para o formato que o localStorage possa lidar que são as strings
+

@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+
+<input/>
+<button style="background-color: rgba(95, 95, 252, 0.527);">Chamar</button>
+
+<script>
+
+var pedidos = []
+
+var iten = document.querySelector('input')// é preciso especificar o valor (value)
+
+
+
+function submit(){    
+
+
+    for(var posicao = 0; posicao < iten.value; posicao = posicao + 1){
+
+        pedidos.push(parseInt(iten.value) + posicao)
+
+        document.write(' [ ' + pedidos[posicao] + '   ' + ' ] ')
+
+        alert('essa é a posição ' + posicao);
+        
+
+    }
+
+}    
+
+console.log(iten)
+
+var button = document.querySelector('button')
+
+
+button.onclick = submit // não coloquei os parenteses poi iria chamar a função de cara, a chamada só
+// é disparada quando se clica no botão
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

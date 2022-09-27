@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        document.write("<hr>")
+        pulaLinha();
+    }
+
+// vamos aplicar a função que gera números aleatório que é a Math.random * 10
+var numeroPensado = Math.round(Math.random() * 10)
+
+console.log(numeroPensado)
+
+var chute = parseInt(prompt("Digite seu chute."))  // o parseInt é a função para transformar a entrada de uma string em número como : "2" 
+
+
+if (chute == numeroPensado){
+
+    mostra("Você é bom de chutes")
+} else {
+
+    mostra("tente mais uma vez");
+
+}
+ 
+
+
+</script>

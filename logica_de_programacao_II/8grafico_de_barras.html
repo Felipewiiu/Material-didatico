@@ -1,0 +1,72 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaRetangulo(x, y, largura, altura, cor) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle=cor;
+        pincel.fillRect(x,y, largura, altura);
+        pincel.strokeStyle='black';
+        pincel.strokeRect(x,y, largura, altura);
+    }
+
+    function desenhaTexto(texto, x, y){
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font = '15px Georgia';
+        pincel.fillStyle = 'black';
+        pincel.fillText(texto, x, y);    
+    }
+
+    // aqui vem mais
+
+
+var serie2015 = [50, 25, 20, 5];
+var serie2016 = [65, 20, 13, 2];// essas são as porcentagens dos usuários
+var cores = ['blue', 'green', 'yellow', 'red'];// essas são as cores dos gráficos
+
+
+function desenhaBarra(x, y, serie, cores, texto){
+    desenhaTexto(texto, x, 20)
+
+    var posicao = 0 // posição é a variavel que está sempre mudando de acordo com o comprimento do array
+    var somaDasAlturas = 0
+    while(posicao < serie.length){
+        var altura = serie[posicao]// serie é o parâmetro que recebe a posição da vareável serie2015 e 2016
+        desenhaRetangulo(x, y + somaDasAlturas, 50, altura, cores[posicao])
+        somaDasAlturas = somaDasAlturas + altura
+        
+        posicao++
+    }
+
+    
+
+}
+
+
+
+
+desenhaBarra(300, 30, serie2015, cores, "2015")
+desenhaBarra(400, 30, serie2016, cores, "2016")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

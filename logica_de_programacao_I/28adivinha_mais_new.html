@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<input/>
+<button style="background-color: rgba(95, 95, 252, 0.527);">Comparar</button>
+
+<script>
+document.write("<h1>Jogo da adivinhação</h1>")
+var segredo = Math.round(Math.random() * 10)
+
+var input = document.querySelector("input");
+input.focus() // serve para sempre que q pagina for carregada ela coloque em foco o campo direcionado
+
+function comparar(){
+
+    if(input.value == segredo){ // é preciso especificar o valor(value)
+
+    alert("Você acertou");
+
+}   else{
+
+    alert("Que pena!! tente novamente.");
+}
+
+input.value = ""; // para limpar o campo de input
+input.focus()
+
+}
+
+var button = document.querySelector("button") 
+// o motivo de colocar um comando dentro de uma variával é para facilitar a manipulação do comando
+
+button.onclick = comparar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

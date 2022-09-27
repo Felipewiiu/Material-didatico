@@ -1,0 +1,6 @@
+.banner__imagem{
+    height: calc(100vh - 72px);/* vh == viewport heit é u tamanho da tela do navegador*/
+    width: 100%;
+    background-image: url("../../img/banner.jpg");
+    background-size: cover;
+}

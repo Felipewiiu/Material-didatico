@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+
+	function mostra(n){
+
+		document.write(n);
+		document.write("<br><br>");
+
+	}
+
+    function calculaImc(altura, peso) {
+
+    var imc = peso / (altura * altura);
+    return imc;
+
+}
+
+var imcFlavio = calculaImc(1.71, 73);
+var imcAmigo = calculaImc(1.72, 68);
+
+var teste = "apenas um teste"
+
+
+mostra(imcFlavio);
+mostra(imcAmigo);
+mostra(teste)
+
+
+</script>

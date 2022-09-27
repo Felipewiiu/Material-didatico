@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var dataLimite = parseInt( prompt("Digite aqui o ano limite"))
+    var anoCopa = 1930;
+    
+// repita até quando anoCopa for menor ou igual a 2016
+    while(anoCopa <= dataLimite){
+
+        alert ("Teve copa em " + anoCopa);
+        anoCopa = anoCopa + 4
+
+    }
+
+    alert("fim")
+
+
+
+ 
+
+</script>

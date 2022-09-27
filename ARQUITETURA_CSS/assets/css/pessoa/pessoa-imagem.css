@@ -1,0 +1,26 @@
+
+/*
+É importante colocar em ordem alfabética 
+*/
+.pessoa__imagem{
+    background-position: center;
+    background-size: cover;/* serve para preencher toda a div com a imagem*/
+    background-color: red;
+    background-repeat: no-repeat; /*serve para que a imagen não se repita*/
+    border-radius: 100%;
+    height: 300px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.pessoa__imagem--roberta{
+    background-image: url("../../img/pessoas/roberta.jpg");
+}
+
+.pessoa__imagem--marcela{
+    background-image: url("../../img/pessoas/marcela.jpg");
+}
+
+.pessoa__imagem--andreia{
+    background-image: url("../../img/pessoas/andreia.jpg");
+}

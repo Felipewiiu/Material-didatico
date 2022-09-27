@@ -1,0 +1,158 @@
+
+
+.home {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfdfd;
+}
+
+
+.cabecalho{
+
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        color: #0478bd;
+        width: 98vw;
+        height: 4rem;
+        background-color: #fdfdfd;
+        
+
+
+}
+.cabecalho-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60vh;
+    height: 4rem;
+    margin-right: 2rem;
+    
+    
+}
+.cabecalho-lista li {
+    padding-bottom: 5px;
+   
+}
+
+.ativo {
+    border-bottom: solid 3px #0478bd;
+}
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 82vh;
+    /* background-color: green; */
+    
+    
+}
+.principal-form {
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    width: 80%;
+    border: 1px solid rgb(148, 146, 146);
+    padding: 20px;
+    border-radius: 20px;
+    
+    /* background-color: #741a1a; */
+}
+
+.areaCadastro{
+    width: 100px;
+    height: 100px;
+    background-color: #0478bd;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.form-main-lista {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+
+}
+
+.container-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-progresso {
+    width: 300px;
+    height: 20px;
+    background-color: rgb(233, 233, 233);
+    margin-right: 10%;
+    border-radius: 30px;
+    border: solid 1px #999898;
+}
+
+.barra-ativa {
+    width: 0px;
+    height: 20px;
+    background: rgb(4,72,102);
+    background: linear-gradient(90deg, rgb(20, 97, 130) 0%, rgba(6,142,170,1) 35%, rgba(13,209,214,1) 100%);
+    margin-right: 10%;
+    border-radius: 30px;
+    transition: all 1000ms;
+}
+
+
+.label-cabecalho {
+    color: #353434;
+    
+}
+.label-id {
+    display: flex;
+    color: #353434;
+    
+}
+.label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 470px;
+    color: #353434;
+    
+}
+.input{
+    margin-top: 10px;
+    border: 0px;
+    padding-left: 15px;
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    background-color:#0479bd14;
+    color: #534f4f;
+}
+.input::placeholder {
+    color: #534f4f;
+    font-size: 0.90rem;
+}
+.input-checkbox {
+    width: 20px;
+    height: 20px;
+   
+}
+.input-data {
+   
+    border: 0px;
+    padding-left: 5px;
+    width: 200px;
+    height: 40px;
+    font-size: 0.90rem;
+    
+    
+}
+

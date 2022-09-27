@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Githube Tutorial</title>
+   <link rel="stylesheet" href="estilo_git.css">
+   <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+   <main class="principal">
+
+      <h1 class="principal_titulo">Tutorial para aprendizado e manipulação do GitHub</h1>
+
+   <p class="principal_texto">Para iniciar um novo repositório é usado o comando (git init) --> vai ser criado um arquivo oculto na pasta onde o
+      git foi iniciado.
+      para saber se o repositório que foi criado (o arquivo oculto) está atualizado com os arquivos use o comando (git
+      status)
+      COMMITS == são gravações das alterações dos estados dos arquivos no repositório === CRIAÇÃO DE UMA NOVA VERSÃO
+      BRANCHS == São a mesma coisa que criar uma cópia do repositório na linha do tempo da arvore do projeto no GitHub
+      Na parte de adição de arquivo no repositório via comando, para adicionar vários ao mesmo tempo basta usar o
+      comando (git add .)--> é o preparo
+      para o COMMIT
+   </p>
+
+   <p class="principal_texto">
+      Para enviar os arquivos para o repositório remoto se usa o comando (git push) --> faz o upload para o GitHub
+      COMMIT -M == Esse parâmetro (-M) é usado para colocar uma mensagem como explicação do commit ex: git --- ( comit
+      -m "commit inicial" )
+      GIT REFLOG == serve para identificar as sequência de histórico de modificação do código --> a versão mais atual
+      vem no topo da descrição
+      Partindo do ponto que se cometeu um erro no código, é possível retornar a uma versão anterior graças aos commits
+      que foram realizados.
+      O comando para se retorna a versão anterios é (git reset --hard) usando a id que é disponibilizada no comando (GIT
+      REFLOG) EX: 8dda315 --> ID
+   </p>
+
+   <h1 class="principal_titulo">Processo de criação de BRANCH </h1>
+
+   <p class="principal_texto">Uma branch é o local onde se é guardado o código de vercionamento ==> como cópias do arquivos -- é possivel ter
+      varia BRANCHS no caso esse
+      procedimento é viável se o código é compartilhado com mais de uma pessoa que esteje trabalhando no seu
+      desenvolvimento
+      Para verificar quantas branchs existem use o comando (git branch)
+      Para a criação de uma nova branch via comando basta digitar (git branch ++ o nome que deseja dar para ela)
+      Para saber qual branch está trabalhando ela estará marcada com * e com a cor (verde)
+      para fazer a alteração por tipo de branch use o comando (git checkout ++ nome da branch)--> isso irá trocar a
+      branch que está trabalhando
+   </p>
+
+   <h1 class="principal_titulo"> UNIÃO DE BRANCHS COM O REPOSITÓRIO FINAL</h1>
+
+   <p class="principal_texto">
+      ANTES DE FAZER QUALQUER COISA É PRECISO TRAZER O ARQUIVO MAIS ATUALIZADO DO GITHUB PARA O REPOSITÓRIO LOCAL COM O
+      COMANDO (git pull)
+      somente depois dessa ação se deve fazer o comando (merge)
+      Para fazer a união use o código (git merge + o nome da branch) na branch principal onde deseja puxar as
+      atualizações e fazer a união
+   </p>
+
+   <h1 class="principal_titulo">PASSOS PARA INICIAR O REPOSITÓTIO NA GITHUB</h1>
+
+   <ol class="principal_lista">
+      <li class="principal_texto"> GIT pull da branch principal </li>
+      <li class="principal_texto"> Gerar uma nova branch a partir da branch principal </li>
+      <li class="principal_texto"> Trabalhar e adicionar novas funcionalidades na nova branch que criou </li>
+      <li class="principal_texto"> Finalizar o trabalho na branch temporária </li>
+      <li class="principal_texto"> Git checkout na branch principal </li>
+      <li class="principal_texto"> Git pull </li>
+      <li class="principal_texto"> Mergia (unir) o código da branch temporário com a branch principal (depois de testar) </li>
+      <li class="principal_texto"> Fazer o git push da branch principal </li>
+   </ol>
+   </main>
+
+
+
+
+
+
+</body>
+
+</html>

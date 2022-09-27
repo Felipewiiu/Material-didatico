@@ -1,0 +1,113 @@
+<canvas width="1345" height="620"></canvas> 
+
+<script>
+
+var tela = document.querySelector('canvas')
+var pincel = tela.getContext('2d')
+
+pincel.fillStyle = 'white'
+pincel.fillRect(0, 0, 1345, 620)// tamanho da tela do navegador
+pincel.fill()
+
+function desenhaCirculo(x, y, raio){
+
+    pincel.fillStyle = 'blue'
+    pincel.beginPath()
+    pincel.arc(x, y, raio, 0, 2 * Math.PI)
+    pincel.fill()
+
+}
+
+function limpaTela(){
+
+    pincel.clearRect(0, 0, 1345, 620)
+
+}
+var raio = 20 // aqui muda o tamanho do pacman-----------------------------
+function bocaFechada(x,y){
+
+        pincel.fillStyle = 'black'
+    pincel.beginPath()
+    pincel.arc(x, y, raio, 0, 2 * 1.6)
+    pincel.fill()
+
+    pincel.fillStyle = 'green'
+    pincel.beginPath()
+    pincel.arc(x, y, raio, 2*1.6, 0)
+    pincel.fill()
+}
+
+
+function bocaAberta(x, y){
+
+    pincel.fillStyle = 'black'
+    pincel.beginPath()
+    pincel.arc(x, y, raio, 0.4, 2 * 1.6)
+    pincel.fill()
+
+    pincel.fillStyle = 'green'
+    pincel.beginPath()
+    pincel.arc(x, y, raio, 2*1.6, -0.4)
+    pincel.fill()
+}
+
+var x = 200
+var y = 50
+function comer(){
+
+    //limpaTela()
+    bocaAberta(x,y)
+
+    if(x == 400){
+        x = 200
+        y = y + 45
+        console.log("valor de Y " + y)
+        if(y == 680){
+            limpaTela()
+            x = 200
+            y = 50
+        }
+    }
+
+    x++
+    
+
+}
+
+
+
+
+    
+
+
+setInterval(comer, 1)
+
+
+
+
+/*
+var x = 60
+
+function atualizaTela(){
+    limpaTela();
+    desenhaCirculo(x, 50, 30);
+    x++;
+    if (x == 1345){
+        x = 60
+    }
+
+}
+
+setInterval(atualizaTela, 1)// 500 milisegundos*/
+
+
+
+
+
+
+
+
+
+
+
+</script>

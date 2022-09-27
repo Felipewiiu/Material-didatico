@@ -1,0 +1,66 @@
+-- REGEX
+
+Regex são expresões regulares que servem para fazer buscas rápidas em um arquivo.
+
+Tipos de quantifier --
+
+? -zero ou uma vez ==> pode existir ou não
+
++ - Uma ou mais vezes ==> pode existir mais de uma vez
+
+* - zero ou mais vezes ==> pode não existir ou existir varias vezes
+
+{n} - exatamente n vezes
+
+{n,} - no mínimo n vezes
+
+{n,m} -- no mínimo n+1, no máximo m vezes
+
+\w -- são os caracteres das palavras de forma curta => [a-zA-Z0-9_]
+
+\b -- é uma âncora que seleciona um word boundary, isso é o início ou fim da palavra.
+      obs{ Depois do conjunto não pode haver um 
+      word char --> [a-z A-Z 0-9]} ==>  ( \w ) não funciona se for precedido de um word char
+
+
+====== Âncoras de início e fim ======
+
+Âncoras -- usadas para avaliar uma linha inteira:
+
+^ -- Define um padrão no início como âncoras [nada pode vir antes do ^ pois não funciona]
+
+$ -- Define um padrão no final como âncoras [nada pode vir depois do $ pois não funciona]
+
+
+====== Definição de grupo ========
+
+Eles são representados pelos ()     
+
+
+======== backreference =======
+
+É quando se cria um grupo de caracteres e depois se faz referência 
+
+===================================================================
+
+Aprendemos que quantifiers são gananciosos por padrão e que podemos utilizar um ? logo após o
+ quantifier, deixando-o preguiçoso.
+
+ [^>] -- o (^) dentro de conjunto serve para negação, ele define quais caracteres vc 
+      não quer buscar 
+
+
+====================== MÉTODOS QUE UTILIZAM EXPRESÕES REGULARES ==================================
+
+-- MATCH
+-- SPLIT
+
+======================AVANÇADO ================================================
+
+LOOKAHEAD- (?=) EXEMPLO --> [a-z](?=z) --> procure uma letra que seja precedida da letra z
+LOOKBEHIND- (?!) EXEMPLO --> X(?!Y)--> significa "pesquisar X, mas somente se não for seguido por Y
+
+================== sites para trinar ========
+
+https://regexr.com/
+

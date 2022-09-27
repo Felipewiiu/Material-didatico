@@ -1,0 +1,537 @@
+
+
+----------------------------------------------------------------Resumo javascript------------------------------------------------------------
+
+-- Precedencia entre operadores === é a ordem que o mundo javascript respeita quando se faz as operações matematicas que é multiplicação, divisão, soma e subtração.
+
+exemplo: 
+
+<meta charset="UTF-8">
+
+<script>
+    document.write( (200 + 100 + 300 + 400) / 4);
+</script>
+
+Para que a operação seja realizada corretamente foi preciso colocar os () para o javascript entender o que é para ser realizado primeiro no caso a soma (200 + 100 + 300 + 400).
+
+-- no mundo java script as partes dos parametros que estiverem em () serão realizados primeiro.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+-- sobre calculos matematicos, em javascript para se arrendodar um valor decimal basta colocar o parametro ==  Math.round () -- sim!! com    letra maiuscula
+
+
+--------------------------------------------------- função javascript ---------  function --------------------------------------------------
+
+O javascript contem funções já pré definidas como: alert, document.write, Math.round entre outras, o mundo javascript te permite criar suas próprias funções como por exemplo: uma função para pular linha. ------- uma função pode ser um atalho para outras funções e deve ser criada no inicio do seu arquivo. 
+
+
+<meta charset="UTF-8">
+<script>
+
+                         parâmetro
+                        	 |
+    function somaDoisNumeros( ) { // -----------------------------Função sem parametro// temos também funções que recembem parâmetros
+
+        document.write(10 + 20);
+    }
+
+    function multiplicaDoisNumeros () {
+
+        document.write(10 * 20);
+    }
+
+    function divideDoisNumeros () {
+        document.write(10/20);
+    }
+
+</script>
+
+-- Quando declaramos uma função, é importante o () logo após o seu nome. Inclusive toda função possui um bloco no qual podemos adicionar quantas instruções quisermos que a função execute quando for chamada. Lembre-se que um bloco é caracterizado por { e }. Tudo que estiver entre as chaves são instruções da função. 
+
+
+------------------------------------------------------Parametros de uma função ---------------------------------------------------------------
+
+  O parâmetro da função é considerado como se fosse uma variável. No caso, ronaldo recebe o que está sendo passado no programa, em mostra(). No caso do Olá pessoal!, ele exibirá este texto. Tendo definido o parâmetro da função, em document.write(), o incluiremos como parâmetro também:
+
+
+  ------------------------------------------------------- função com o uso de return ---------------------------------------------------------
+
+  function geraCodigo(letra, numero1, numero2) {
+
+    return "GH1022";
+}
+
+
+Lembre-se que uma função pode receber zero ou mais parâmetros. Dentro de seu bloco, ela pode realizar cálculos e operações que podem usar variáveis, inclusive até outras funções. Contudo, uma função só pode retornar um valor e é por isso que usamos a instrução return. Essa instrução indica para a função quais valores serão retornados por ela. No caso da função de Lionel, não importa que parâmetro você passe para a função, ela sempre retornará GH1022.
+
+
+
+---------------------------------------------------- O comando prompt ----------------------------------------------------------------------
+
+O prompt é uma função do javascript, ele serve como entrada de dados // é uma função que te retorna um valor como texto nunca um número --
+Exemplo: quando se digita um número no prompt ele se comporta como string -- "500" -- "2" -- e por ai vai..
+exemplo de função ----- prompt("Qual é a sua altura") ----> entre os parenteses é possivel se colocar informações como a pergunta do exemplo.
+
+
+
+Para que a função prompt converta para número podemos fazer uso da função --  =   ==========   parseInt()  =========
+
+
+
+========================================================================
+
+var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+
+var empates = prompt("Entre com o número de empates.");
+
+var pontos = vitorias  * 3 + empates;
+
+mostra("Os pontos do seu time são " + pontos);
+
+========================================================================
+
+
+========================================================================
+
+var a = parseInt("10");
+var b = parseInt("Calopsita");
+var c = parseInt(10);
+
+
+A variável `a` recebe o número 10 retornado por `parseInt`.
+
+A variável `b` recebe `NaN` (not a number) retornado por `parseInt`.
+
+A variável `c` recebe 10, número, retornado por `parseInt`.
+
+
+------------------------------------------------------------------------
+
+
+A variável a recebe o número 10 retornado por parseInt. Veja que a função esta recebendo a string "10". Ela converte a string em um número.
+
+A variável b recebe NaN (not a number) retornado por parseInt. Isso é verdade, porque parseInt está recebendo a string "Calopsita". É impossível converter esse texto para número, pois não há uma representação numérica para ele, como foi o caso de a.
+
+A variável c recebe 10, número, retornado por parseInt. Quando parseInt recebe um número e não uma string, ele devolve o mesmo número, ou seja, não realiza conversão alguma. Não dá erro, funciona.
+
+
+
+--------------------------------------------------------- Função -- if(){} ------------------------------------------------------------------
+
+
+É a função que estabelesse uma condição, dentro dos parenteses é onde ela faz a análise se uma condição é (false) or (true) para a execusão ou não da função.
+
+exemplo da ultilização do código:
+
+=======================================================================
+
+if(pontos > 28)
+    mostra("Seu time está melhor do que no ano passado.");
+
+if(pontos < 28)
+    mostra("Seu time está pior do que no ano passado.");
+
+if(pontos == 28)
+    mostra("Seu time está igual igual ao ano passado.");
+
+=======================================================================
+
+********* sobre o comparador (=) ele representa uma atribuição de valor ou como já aprendemos o famoso "recebe" --> var teste = 90 -- 
+######### sobre o comparador (==) esse sim é considerado pela linguagem como um valor de igualdade
+
+
+
+
+-------------------------------------------------- Função números aleatórios --------------------------------------------------------
+
+
+Para a criação de números aleatórios podemos usar a função do javascript ---> Math.random() ele gera um número parecido com isso --
+
+Math.random() 0.1019091808388295
+
+podemos arredondar esse número com a função Math.round(Math.random())
+
+quando multiplicado por 10 geram numeros aleatórioa até 10 --- Math.random() *10 == 8.025271815895378
+
+
+
+--------------------------------------------------Função if(){} -- else(){} ---------------------------------------------------------
+
+
+É uma função condicional se for verdadeira realiza uma ação se falsa (false) --  realiza outra ação por exemplo:
+
+
+ Só irei para a praia (SE) o dia estiver ensolarado (SE NÃO) ficarei assistindo um filme ========>
+
+ Note que (SE) é equivalente a (if) e (ELSE) a se não , isso escrito em javascript ficaria assim:
+
+
+ 
+
+    var irParaPraia = prompt("Vamos para praia ? digite sim ou não")
+
+ var vamos = "sim"
+ 
+
+ if (irParaPraia == vamos){
+
+    document.write("Demorou, vou trocar de roupa agora!!")
+
+ } else{
+
+    document.write("Que pena, eu odeio ficar em casa")
+
+ }
+
+
+
+--------------------------------------------------------- Estrutura de repetição ---------------------------------------------------------
+
+
+Para se fazer uma codificação se repetir podemos usar por exemplo a função (while) segue sua estrutura.
+
+var contador = 1
+
+while(contador <= 10){
+	
+document.write("Vamos repetir isso")
+contador = contador + 1
+
+}
+
+Lembre-se que while repetirá TODAS as instruções que estiverem dentro do seu bloco e a condição passada para ele for true. Veja que while recebe em seus parênteses () a expressão contador <= 10.
+
+Aprendemos que expressões como essa retornam true ou false. Sendo assim, quando no navegador interpretar a linha do while perguntará: o valor da variável contador é menor que ou igual a 10? Como a variável contador recebeu o valor 1 em sua inicialização o resultado da expressão contador <= 10 será true. Sendo assim, o while terá autorização para executar a instrução dentro do seu bloco, no caso, a instrução mostra("Você errou"); e a instrução contador = contador + 1.
+
+Faz sentido ele executar mostra("Já era, você errou!");, claro, mas você lembra a razão de fazermos contador = contador + 1? Veja que essa variável só existe por causa de uma finalidade: é ela que quebrará o lanço de repetição do while. A cada repetição do mostra, precisamos incrementá-la para saber que já mostramos, uma, duas, três vezes e por ai vai. Se não tivermos a instrução contador = contador + 1 nunca a condição passada para o while dará false e cairemos em uma repetição infinita, o famoso loop infinito.
+
+
+DICA =====================>   contador++ // cotador++ é um atalho de incremento de variável que substitui (contador = contador +1)
+
+
+
+----------------------------------------------- A FUNÇÃO isNaN --------------------------------------------------------------------------
+
+Para saber se um valor é NaN precisamos usar uma função específica, a isNaN. Essa função recebe um parâmetro e retorna true ou false caso o valor seja NaN ou não.
+
+Sabendo que a função isNaN recebe um parâmetro e retorna true caso o parâmetro passado seja NaN, qual das opções abaixo altera corretamente o código de Daniel para usar a função isNaN?j
+
+
+
+
+=================================================== A FUNÇÃO (For) ======================================================================
+
+
+A função (for) possui três estrutura como parâmetro e é parecia com o (while), ela também é uma estrutura de recepetição..
+
+
+
+For(espaço1; espaço2; espaço3){
+	
+
+espaço1 == é a variavel de incremento
+
+espaço2 == é a condição de repetição
+
+espaço3 == é o incremento da variável do espaço1
+}
+
+
+exemplo de como anular uma repetição na função (while):-----------------------------------------------------------------------------------
+
+=======================================================================
+
+var contador = parseInt(prompt("Digite aqui o número de tentativas"))
+
+while (contador <= 3){
+
+    alert("pode entrar, número de tentativas " + contador)
+    if(contador == "sair"){
+
+        contador = 3  ------> a condição se o contador for igual(==) a sair, o contador valerá 3 direto assim satisfazendo a condição (while)
+
+    }
+    contador++
+
+=======================================================================
+
+Uma outra maneira de se interromper uma função de repetição é ultilizando o (break) --------------------------------------------------
+
+=======================================================================
+
+var contador = parseInt(prompt("Digite aqui o número de tentativas"))
+
+while (contador <= 3){
+
+    alert("pode entrar, número de tentativas " + contador)
+    if(contador == "sair"){
+
+        break ------> a condição se o contador for igual(==) a sair, o segunda instrução é break que serve para quebrar o loop
+
+    }
+    contador++
+
+=======================================================================
+
+
+---------------------------------------------------------- Aninhamento de função -----------------------------------------------------
+
+É possível colocar um (for) dentro de outro , dar para fazer por exemplo um sistema de linhas e colunas com essas repetições
+segue o exemplo:
+
+=======================================================================
+
+ for(linha = 1; linha<= 70; linha++){   //exemplos de aninhamentos
+
+    
+    for(coluna = 1; coluna <= 40; coluna++){ // só vai sair do segundo loop quan satisfazer o (for) coluna
+
+        document.write("Virus")
+        
+    }
+    
+    pulaLinha()
+
+}
+======================================================================
+
+
+----------------------------------------------------- Capitulo 08 interaja de maneira diferente ---------------------------------
+
+
+ neste capitulo foi incluido uma nova maneira de interação com o usuário com ultilização da tag <imput/> e a <butoon>
+ <imput/> ==> serve para entrada de dados pelo usuário
+ 
+ ----------------------------------------------------------------------
+ 
+ <meta charset="UTF-8">
+
+<input/>
+<button style="background-color: rgba(95, 95, 252, 0.527);">Comparar</button>
+
+<script>
+
+var segredo = 5
+
+var input = document.querySelector("input"); // para acessar a tag html via javascript se usa o comando (querySelector)
+
+function comparar(){ // é possivel chamar a função no console do navegador não esquecendo dos () sem parentese imprime o código da função.
+
+    if(input == segredo){
+
+    alert("Você acertou");
+
+}   else{
+
+    alert("Que pena!! tente novamente.");
+}
+
+
+}
+
+----------------------------------------------------MANIPULAÇÃO DE ARRAYS-----------------------------------------------------------------------
+
+
+(Array) seria um tipo de variável que se comporta como uma lista, onde de se pode guardar todos os tipos de valores que o javascript suporta
+que são elas: strings, bulleano e números.
+
+exemplo:
+
+var numeros = [] ====> como se vê ela é representada por colchetes e é ali que se é armazenada os conjuntos de informações.
+
+var numeros = [a, b, c, d] ===> esse exemplo possui 3 posições mas é formado por quatro valores pois o zero também é uma posição
+
+numero[0] == a ---- leitura: número posição zero é igual a (A)
+
+numero [1] == b ---- leitura: número posição um é igual a (B)
+
+
+exemplo de como acessar seus componentes:
+ 
+ var numero = [1, 3, 4, 6]
+
+	for(var posicao = 0; posicao < numero.lenght; posicao++){
+
+
+	}
+
+
+===========================================================================================
+
+Progamação orientada ao canvas ==> é uma ferramenta em que se é possivel fazer desenhos e animações
+e desenhos.
+
+sua chamada se dá pelo comando no mundo HTML, (<canvas>)
+onde se é passado sua altura e sua largura 
+
+para se desenhar, precisamos de um pincel logicamente. O pincel possui o nome de :
+context('2d')
+
+para facilitar sua chamada colocamos ele dentro de uma variável, olha o exemplo:
+
+var tela = document.querySelector('canvas')
+
+var pincel = tela.getContext('2d')
+
+para se desenhar na tela primeiro temos que entender que o canvas trabalho com retas que
+são orientadas por cordenadas , é preciso indicar o ponto de início de uma reta e seu fim.
+
+exemplo de como se desenhar um retângulo:
+
+primeiro é preciso molhar o pincel na tinta com o comando;
+
+pincel.fillStyle = 'black' ==> pincel recebe a cor preta 
+
+pincel.fillRect(0, 0, 200, 200)
+
+esse quadrado recebe 200 de largura e 200 de altura
+
+Segue o exemplo de um código completo..
+
+==========================================================================================
+
+<canvas width="1345" height="620"></canvas> 
+
+<script>
+
+var tela = document.querySelector('canvas')
+var pincel = tela.getContext('2d')
+
+pincel.fillStyle = 'lightgrey'
+pincel.fillRect(0, 0, 1345, 620)// tamanho da tela do navegador
+pincel.fill()
+
+function desenhaCirculo(x, y, raio){
+
+    pincel.fillStyle = 'blue'
+    pincel.beginPath()
+    pincel.arc(x, y, raio, 0, 2 * Math.PI)
+    pincel.fill()
+
+}
+
+function limpaTela(){
+
+    pincel.clearRect(0, 0, 1345, 620)
+
+}
+
+desenhaCirculo(50, 100, 30)
+
+
+</script>
+
+============================================================================================
+
+Função de repetição com intervalos=====
+
+Temos uma função que funciona como temporizador que chama e repete algo de tempos em tempos
+o seu nome é:  ===> setInterval() ==>  que recebe como parâmetro o nome da função que você
+quer chamar e seu tempo de chamada..
+
+
+setInterval(nome da função, quantidade de tempo)
+setInterval(desenhaCirculo, 1000) --- chama de 1 em 1 segundo
+
+
+###########################################################################################
+
+               TRABALHANDO COM EVENTOS
+
+ Os eventos possuem propriedades olha esse exemplo:
+
+ document.onclick = 'recebe uma função aqui'
+
+ document possui uma propriedade que se chama onclick que é passada como parametro da função
+ por debaixo dos panos de forma anônima que podemos acessar com o console . logicamente
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

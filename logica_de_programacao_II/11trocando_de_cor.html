@@ -1,0 +1,107 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        var raio = 10
+        evento.shiftKey = false;
+
+            if(evento.shiftKey == true){
+
+                raio = 30; // aqui eu reatribui o valor da variávei que valia 10 e agora recebe 30
+    
+              } 
+              
+        pincel.fillStyle = cores[selectCor]; // recebe as posições da variável cores
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(x + ',' + y);
+        
+        
+    }
+
+    tela.onclick = desenhaCirculo;
+
+    
+
+    function mudaCor() {
+
+        var posicao = 0
+
+        while(posicao < cores.length){
+
+                if(selectCor == 2){
+                    selectCor = selectCor - cores.length // condição para a variavel retornar a posição zero
+                }
+            selectCor = selectCor + 1// incremente a mudança de estado da variável cor  
+            posicao++
+            break
+        }
+
+        return false;
+    }
+
+    var cores = ['blue', 'red', 'green']
+    var selectCor = 0
+    console.log(selectCor)
+    
+    
+    
+    tela.oncontextmenu = mudaCor;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+    var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        pincel.fillStyle = 'red';
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(x + ',' + y);
+
+        var posicao = 0
+
+        while(posicao < cores.length){
+
+
+            posicao++
+            break
+        }
+
+
+*/
+
+
+
+
+</script>

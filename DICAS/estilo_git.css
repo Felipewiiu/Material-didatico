@@ -1,0 +1,31 @@
+.principal{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 80%;
+background-color: #fdfdfd;
+margin: auto;
+padding: 1rem;
+}
+
+.principal_titulo{
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+.principal_texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.principal_lista{
+    padding-bottom: 2rem;
+}

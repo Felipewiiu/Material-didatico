@@ -1,0 +1,69 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia (n){
+
+        return Math.round(Math.random() * n);      // A instrução return é como um moedor de carne onde os parametros são colocados de um lado e de outro sai o resultado ===> uma função retorna apenas um valor!!
+        
+    }
+
+
+alert("Vamos fazer um jogo? eu penso em um número é você adivinha.");
+
+var numeroPensado = sorteia(10)
+
+console.log(numeroPensado + " Esse é o numero kkkkk");    
+
+
+
+
+while(chute != numeroPensado){ // essa é a função que eu quero que se repita caso o valor não seja correspondido.
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+        if (chute != numeroPensado){ alert("Meu caro amigo você errou rs! tente mais uma vez")
+
+    } else{
+
+        alert("Parabens! você já pode jogar na mega sena!!")
+
+    }
+
+    }
+
+
+if(chute == numeroPensado) {
+      mostra("Você acertou, pois eu pensei no " + numeroPensado + " mesmo!!"); // essa parte não está funciomando, por que?
+
+}
+
+
+
+if(chute > numeroPensado){
+
+    mostra("Você chutou o " + chute + " e ele foi maior do que eu pensei.");
+
+}
+
+if(chute < numeroPensado){
+
+    mostra("Você chutou o " + chute + " e ele foi menor do que eu pensei.")
+}
+
+
+
+
+
+
+</script>

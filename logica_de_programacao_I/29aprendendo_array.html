@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+<input/>
+<button style="background-color: rgba(95, 95, 252, 0.527);">Comparar</button>
+
+<script>
+document.write("<h1>Jogo da adivinhação</h1>")
+var segredos = [9,8,7,6]
+
+var input = document.querySelector("input");
+input.focus() // serve para sempre que q pagina for carregada ela coloque em foco o campo direcionado
+
+function comparar(){
+
+    var achou = false;
+    for(var posicao = 0; posicao < segredos.length; posicao++){
+
+        if(input.value == segredos[posicao]){ // isso acessa a primeira posição do array que é 0
+
+            alert("Você acertou");
+            achou = true; // essa variavel serve para exibir ou não o alerta de erro
+            break;
+
+        }  
+
+    }
+
+    if(achou == false){
+
+        alert("você errou");
+
+    }
+
+    input.value = ""; // para limpar o campo de input
+    input.focus()
+
+}
+
+var button = document.querySelector("button") 
+// o motivo de colocar um comando dentro de uma variával é para facilitar a manipulação do comando
+
+button.onclick = comparar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

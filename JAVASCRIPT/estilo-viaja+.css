@@ -1,0 +1,80 @@
+
+
+header{
+    background: linear-gradient(270deg, black 0%, rgb(55, 53, 53) 51%);
+    
+
+}
+
+.titulo-principal{
+    display: inline-block;
+    font-size: 5em;
+    margin: 5px 0 10px 20px ;
+    color: white;
+}
+.navegacao{
+    position: relative;
+    width: 940px;
+    margin: 0px auto;
+    
+    
+}
+
+nav ul{
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    font-size: 2em;
+    color: white;
+ 
+}
+
+.navegacao li{
+    display: inline-block;
+    padding: 0px 0 0 10px;
+}
+
+.conteudo-principal{
+    width: 940px;
+    margin: 50px auto 0px;
+    
+}
+
+.conteudo-principal h2{
+    font-size: 2em;
+    padding-bottom: 40px;
+}
+
+.conteudo-principal label {
+     font-size: 22px;
+     display: block;
+     padding-bottom: 5px;
+}
+
+.conteudo-principal input{
+    display: block;
+    width: 400px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+.date{
+    padding: 1px 2px;
+    width: 400px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+button{
+    display: block;
+    padding: 22px;
+    margin: 138px 0px 0px 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    transition: 400ms;
+    transform: scale(1.1);
+    background-color: rgba(46, 230, 46, 0.788);
+}

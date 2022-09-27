@@ -1,0 +1,189 @@
+
+
+.home {
+    font-family: 'Montserrat', sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background:linear-gradient(45deg, #020202,#18619c, #020202);
+background-size:200% 200%;
+height: 100vh;
+width: 100vw;
+animation: colors 15s ease infinite;
+}
+
+.cx-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 60vh;
+    width: 100vw;
+    /* background-color: #A8D909; */
+}
+
+.img-logo1 {
+    height: 55%;
+    width: 15%;
+}
+
+@keyframes colors {
+0%{
+background-position: 0% 50%;
+}
+
+50%{
+    background-position: 100% 50%;
+
+}
+
+100%{
+    background-position: 0% 50%;
+
+}
+
+}
+
+.home-caixa {
+background-color: #0478bd;
+font-weight: bolder;
+color: #fdfdfd;
+padding: 1rem;
+border: 4px solid #fdfdfd;
+border-radius: 50px;
+cursor: pointer;
+
+    
+}
+
+.home-caixa:hover {
+    transition: 1s;
+    transform: scale(0.9);
+    background-color: #A8D909;
+    color: #181717;
+}
+
+.home-caixa-texto {
+font-size: 2rem;
+}
+
+.login-titulo {
+    font-size: 3rem;
+    padding: 1rem;
+    font-weight: bolder;
+    color: #0478bd;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 31%;
+    height: 75vh;
+    padding: 1rem;
+    background-color: #fdfdfd;
+    border-radius: 30px;
+}
+
+
+.login-input {
+    height: 2rem;
+    width: 90%;
+    margin: 0px;
+    border: solid 1px rgb(83, 83, 83);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.40rem;
+}
+
+.login-input::placeholder{
+    font-size: 1.30rem;
+    padding-left: 15px;
+    
+}
+
+.login-button {
+    width: 250px;
+    height: 55px;
+    border-radius: 20px;
+    font-size: 1.30rem;
+    border: none;
+    font-weight: bolder;
+    color: #fdfdfd;
+    background-color: #2499dd;
+}
+
+.login-button:hover{
+    background-color:#0478bd;
+    color: #fdfdfd;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+.hide {
+    display: none;
+    
+}
+/* -----------------------------------------------Responsividade----------------------------------------------------- */
+
+@media screen  and (max-width: 768px){
+   
+.cx-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 40vh;
+    width: 100vw;
+    /* background-color: #A8D909; */
+}
+
+.img-logo1 {
+    height: 47%;
+    width: 34%;
+    }
+
+.home-caixa-texto {
+    font-size: 1.3rem;
+}
+
+.home-caixa {
+  height: 21px;
+  width: 273px;
+}
+
+.form-login {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 77%;
+    height: 59vh;
+    padding: 1rem;
+    background-color: #fdfdfd;
+    border-radius: 30px;
+    position: absolute;
+
+}
+
+.login-input {
+    height: 1.2rem;
+    width: 90%;
+    margin: 0px;
+    border: solid 1px rgb(83, 83, 83);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.40rem;
+}
+
+
+
+}

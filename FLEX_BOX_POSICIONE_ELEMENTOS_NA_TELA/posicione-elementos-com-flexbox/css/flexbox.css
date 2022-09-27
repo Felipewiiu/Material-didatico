@@ -1,0 +1,153 @@
+.cabecalhoPrincipal .container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav{
+    display: flex;
+    
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;/* Distribui os espaços uniformemente entre os elementos*/
+    width: 75%;
+}
+
+.rodapePrincipal-contatoForm{
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 252px;/*para que o flex-wrap funcione foi preciso definir um tamanho para seu pai*/
+}
+
+.conteudoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.conteudoPrincipal-cursos-link{
+    width: 23%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n)
+{/* nth-child serve para selecionar elementos com sua posição em grupo de elementos */
+    margin-right: 0;
+}
+
+.videoSobre .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.videoSobre-video{
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+.videoSobre-sobre{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+
+}
+
+.videoSobre-sobre-list{
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+
+/*.conteudoPrincipal-cursos-link:nth-child(4n+1){/*essa é uma conta 4x0 = 1  4x1=4 e assim por diante
+    margin-right: 0;
+}*/
+
+/*Transformação para responsivo*/
+
+@media (max-width: 768px){
+    .cabecalhoPrincipal-nav{
+        flex-direction: column;
+    }
+
+
+
+
+
+.cabecalhoPrincipal .container{
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+}
+
+.conteudoPrincipal-cursos-link{
+    width: 100%;
+}
+
+.conteudoPrincipal-cursos{
+    flex-direction: column;
+}
+
+.videoSobre .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSobre-video{
+    margin: 0 auto;
+}
+
+.rodapePrincipal-navMap-list{
+    height: auto;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    margin: 0;
+    width: 100%;
+}
+
+.rodapePrincipal-contatoForm{
+    width: 100%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    justify-content: center;
+}
+
+.cabecalhoPrincipal-nav-link-app{
+    order: -1; /*Éssa é a maneira de inverter as osdens dos filhos sem manipular o html que não é uma boa prática*/
+}
+
+}
+
+
+
+

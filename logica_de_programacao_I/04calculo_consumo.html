@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+
+
+ <h3>Alcool ou gasolina?</h3>
+
+<script>
+
+function  numerosInteiros(arredonde) {
+
+	 return Math.round(arredonde)
+
+}
+
+var litros = 40
+var caminhoComGasolina = 481
+var consumo = caminhoComGasolina / litros
+var caminhoComAlcool = 300
+
+
+document.write("O consumo de gasolina é " + numerosInteiros (consumo) + " litros por km/l." + "<br>") 
+
+// preciso descobrir o por que não funciona esse comando transformar Math.round em outro nome mais fácil!! 
+
+consumo = caminhoComAlcool / litros
+
+document.write("O consumo de Alcool é " + consumo + " litros por km/l.")
+
+
+</script>

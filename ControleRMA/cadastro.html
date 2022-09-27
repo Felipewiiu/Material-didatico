@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">   
+     <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <title>Controle RMA</title>
+</head>
+
+<body class="home">
+    <header class="cabecalho">
+        <img src="assets/img/letraLogo.png" alt="" class="img-logo">
+        <ul class="cabecalho-lista">
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <li class="ativo">Cadastro de RMA</li>
+            <a href="consultaCadastro.html"><li>Consultar cadastro</li></a>
+        </ul>
+        <li class="menu">Menu</li>
+    </header>
+    <main class="principal">
+        <form class="principal-form" data-form>
+                <div class="form-container">
+                    <label class="label-cabecalho" for="data">Início de processo</label>
+                    <input type="date" id="data" class="input">
+                </div>
+
+                <div class="form-container">
+                    <label class="label-cabecalho" for="organizacao" >Nome da organização</label>
+                    <input type="text" id="organizacao" class="input" placeholder="Digite a organização" required>
+                </div>
+
+                <div class="form-container">
+                    <label class="label-cabecalho" for="numero-rma">Número do RMA</label>
+                    <input type="number" id="numero-rma" class="input" placeholder="Digite o número do RMA">
+                </div>
+
+                <div class="form-container">
+                    <label class="label-cabecalho" for="numero-nf">Número da nota fiscal</label>
+                    <input type="number" id="numero-nf" class="input" placeholder="Digite a nota fiscal">
+                </div>
+
+                <div class="form-container">
+                    <label class="label-cabecalho" for="nome-vendedor">Nome do vendedor</label>
+                    <input type="text" id="nome-vendedor" class="input" placeholder="Digite o nome do vendedor">
+                </div>
+
+                <div class="form-main-lista">
+                    <label class="label-id" for="id-atendimento" >ID de atendimento</label>
+                    <input type="number" id="id-atendimento" class="input" placeholder="Digite o ID de atendimento">
+                </div>
+
+                <button type="submit" class="btn-cadastrar" >Cadastrar</button>
+
+        </form>
+        <aside class="painel-os">
+                
+        </aside>
+    </main>
+<script src="assets/js/cadastro.js"></script>
+
+</body>
+
+</html>
