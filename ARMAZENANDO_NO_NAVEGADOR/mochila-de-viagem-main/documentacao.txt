@@ -18,3 +18,4 @@
 
 -- É uma função que converte para o formato que o localStorage possa lidar que são as strings
 
+====== Operador ternário usado na linha 32 (?) ele é um ponto de interrogação para fazer a função do if 

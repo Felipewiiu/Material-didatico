@@ -27,9 +27,11 @@ form.addEventListener("submit", (evento) =>{
         itemAtual.id = existe.id // REPRESENTA O ÍNDICE DO ARRAY
         
         atualizaElemento(itemAtual)
+
+        itens[itens.findIndex(elemento => elemento.id === existe.id)] = itemAtual
         
     }else{
-        itemAtual.id = itens.length
+        itemAtual.id = itens[itens.length -1] ? (itens[itens.length - 1]).id + 1 : 0 // operador ternário -- se o array for vazio ele vira 0
 
         criaElemento(itemAtual)
     
@@ -96,9 +98,14 @@ function deletaElemento(tag, id) {
     console.log(id)
     //itens.splice("O que queremos remover vem aqui como elemento")
 
-    itens.splice(itens.findIndex(elemento => elemento.id === id), 1);
+    itens.splice(itens.findIndex(elemento => elemento.id === id), 1); //splice recebe dois parametros
     console.log(itens)
+
+    localStorage.setItem("itens", JSON.stringify(itens))
+
 }
+
+
 
 
 
